@@ -1,2 +1,3 @@
 #!/bin/bash
-echo "$(echo "$PATH" | grep -o ':' | wc -l | awk '{print $1+1}')"
+echo "$(IFS=':'; set -f; set -- $PATH; echo $#)"
+
