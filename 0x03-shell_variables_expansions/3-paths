@@ -1,3 +1,2 @@
 #!/bin/bash
 echo "$(IFS=':'; set -f; set -- $PATH; echo $#)"
-
